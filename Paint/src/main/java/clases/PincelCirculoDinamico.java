@@ -1,4 +1,5 @@
 package clases;
+import javafx.scene.canvas.GraphicsContext;
 public class PincelCirculoDinamico implements PincelCirculo{
     private int radio;
     PincelCirculoDinamico(int radio){
