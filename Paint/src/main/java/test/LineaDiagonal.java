@@ -1,5 +1,8 @@
 package test;
 
+import clases.Pincel;
+import javafx.scene.canvas.GraphicsContext;
+
 public class LineaDiagonal {
     private Pincel pincel;
 
