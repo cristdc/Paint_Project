@@ -6,11 +6,11 @@ public enum TipoPincel {
     private Pincel pincel;
 
     private TipoPincel(Pincel p){
-        throw new UnsupportedOperationException("SIn programar");
+        this.pincel=p;
     }
 
     public Pincel getPincel(){
-        throw new UnsupportedOperationException("SIn programar");
+        return this.pincel;
     }
     public static List<Pincel> getPinceles(){
         throw new UnsupportedOperationException("SIn programar");
