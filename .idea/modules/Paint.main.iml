@@ -9,5 +9,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-fxml:win:20" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-controls:win:20" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-graphics:win:20" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-base:win:20" level="project" />
   </component>
 </module>
