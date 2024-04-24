@@ -7,7 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../../Paint/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../Paint/src/test/resources" type="java-test-resource" />
     </content>
-    <orderEntry type="jdk" jdkName="azul-20" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Paint.main" />
     <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter:5.9.1" level="project" />
