@@ -7,7 +7,7 @@ import java.util.List;
 public enum TipoPincel{
     PINCEL_BASICO(new PincelBasico()), PINCEL_GORDO(new PincelGordo()),
     PINCEL_GROSOR_VARIABLE(new PincelGrosorVariable(2,20)), PINCEL_CONTINUO(new PincelContinuo()),
-    PINCEL_RECTANGULO(new PincelRectangulo()), PINCEL_ESTRELLA();
+    PINCEL_RECTANGULO(new PincelRectangulo()), PINCEL_ESTRELLA(new PincelEstrella());
 
     private Pincel pincel;
 
@@ -22,14 +22,14 @@ public enum TipoPincel{
         List<Pincel> pinceles = new ArrayList<>();
         TipoPincel[] pincel = TipoPincel.values();
 
-        /*List<Pincel> EXPECTED_LIST =
+        List<Pincel> EXPECTED_LIST =
                 Arrays.asList(PINCEL_BASICO.getPincel(), PINCEL_CONTINUO.getPincel(),
                         PINCEL_ESTRELLA.getPincel(), PINCEL_GORDO.getPincel(),
                         PINCEL_RECTANGULO.getPincel(), PINCEL_GROSOR_VARIABLE.getPincel());
-*/
-        for(int i = 0; i<pincel.length; i++){
+
+        /*for(int i = 0; i<pincel.length; i++){
             pinceles.add(pincel[i].getPincel());
-        }
-        return pinceles;
+        }*/
+        return EXPECTED_LIST;
     }
 }

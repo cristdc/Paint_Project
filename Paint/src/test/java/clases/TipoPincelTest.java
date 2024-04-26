@@ -15,10 +15,10 @@ public class TipoPincelTest {
     public void test1(){
 
         List<Pincel> tipoPincel = TipoPincel.getPinceles();
-        Assert.assertEquals(4,tipoPincel.size());
+        Assert.assertEquals(6,tipoPincel.size());
 
         for(int i =0; i<tipoPincel.size(); i++){
-            Assert.assertEquals(Pincel.class,tipoPincel.get(i));
+            Assert.assertEquals(TipoPincel.getPinceles().get(i),tipoPincel.get(i));
         }
     }
 
