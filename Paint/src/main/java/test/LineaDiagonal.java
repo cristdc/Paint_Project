@@ -23,7 +23,7 @@ public class LineaDiagonal {
 
         boolean repetir = true;
         while(repetir){
-            this.pincel.dibujar(g, p);
+            this.pincel.dibujar(g, new Punto(x,y));
             x+=20;
             y+=20;
 

@@ -11,7 +11,7 @@ repositories {
 }
 
 application{
-    mainClass="aplicacion.ProgramaPaint" //aquí va el programa que se va aejecutra
+    mainClass="test.PincelTester"
 }
 javafx{
     modules("javafx.controls","javafx.fxml")

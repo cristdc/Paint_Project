@@ -6,7 +6,7 @@ import java.util.List;
 
 public enum TipoPincel{
     PINCEL_BASICO(new PincelBasico()), PINCEL_GORDO(new PincelGordo()),
-    PINCEL_GROSOR_VARIABLE(new PincelGrosorVariable(2,20)), PINCEL_CONTINUO(new PincelContinuo()),
+    PINCEL_GROSOR_VARIABLE(new PincelGrosorVariable(4,40)), PINCEL_CONTINUO(new PincelContinuo()),
     PINCEL_RECTANGULO(new PincelRectangulo()), PINCEL_ESTRELLA(new PincelEstrella());
 
     private Pincel pincel;
