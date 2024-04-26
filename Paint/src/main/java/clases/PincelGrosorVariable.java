@@ -5,23 +5,25 @@ public class PincelGrosorVariable extends PincelCirculoDinamico {
     private int radioMaximo;
     PincelGrosorVariable(int min, int max){
         super(min);
-        this.radioMaximo=max;
-        this.radioMinimo=min;
+        if  (min>0 && max>0){
+            this.radioMaximo=max;
+            this.radioMinimo=min;
+        }else {
+            throw new IllegalArgumentException("Los dos radios deben ser positivos");
+        }
+
 
     }
 
-    public int getRadioMinimo() {
-        return this.radioMinimo;
-    }
-
-    public int getRadioMaximo() {
-        return this.radioMaximo;
+    @Override
+    public int getRadio() {
+        return super.getRadio();
     }
 
     @Override
     public void setRadio(int radio) {
-        if (radio > this.radioMinimo && radio < this.radioMaximo){
-
+        if (radio >= this.radioMinimo && radio <= this.radioMaximo){
+             super.setRadio(radio);
         }
     }
 }
