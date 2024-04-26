@@ -20,8 +20,9 @@ public enum TipoPincel{
     public static List<Pincel> getPinceles(){
         List<Pincel> pinceles = new ArrayList<>();
         TipoPincel[] pincel = TipoPincel.values();
-        for(int i = 0; i<TipoPincel.values().length; i++){
-            pinceles.add(pincel[i].pincel);
+
+        for(int i = 0; i<pincel.length; i++){
+            pinceles.add(pincel[i].getPincel());
         }
         return pinceles;
     }

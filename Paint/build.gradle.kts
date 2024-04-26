@@ -11,7 +11,7 @@ repositories {
 }
 
 application{
-    mainClass="aplicacion.ProgramaEquipos"
+    mainClass="aplicacion.ProgramaPaint" //aquí va el programa que se va aejecutra
 }
 javafx{
     modules("javafx.controls","javafx.fxml")
