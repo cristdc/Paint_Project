@@ -1,18 +1,22 @@
 package clases;
 
+import javafx.scene.canvas.GraphicsContext;
+
 public class PincelBasico implements PincelCirculo{
-    public static int RADIO;
+    public static int RADIO = 1;
     PincelBasico(){
-        throw new UnsupportedOperationException("Sin programar");
+
     }
 
     @Override
     public int getRadio() {
-        return 0;
+        return sup
     }
 
     @Override
     public void dibujar(GraphicsContext g, Punto p) {
-        PincelCirculo.super.dibujar(g, p);
+
     }
+
+
 }
