@@ -4,19 +4,18 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Paint;
 
 public class PincelGordo implements PincelCirculo{
-    public static final int RADIO;
+    public static final int RADIO = 20;
 
-    PincelGordo(){
-        throw new UnsupportedOperationException("Sin programar");
+    PincelGordo(){}
+
+    @Override
+    public String toString() {
+        return "Pincel Gordo";
     }
 
     @Override
     public int getRadio() {
-        return 0;
+        return RADIO;
     }
 
-    @Override
-    public void dibujar(GraphicsContext g, Punto p) {
-
-    }
 }
