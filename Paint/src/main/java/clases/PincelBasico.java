@@ -1,8 +1,20 @@
 package clases;
 
-public class PincelBasico {
-    public static int RADIO;
+import javafx.scene.canvas.GraphicsContext;
+
+public class PincelBasico implements PincelCirculo{
+    public static int RADIO = 1;
     PincelBasico(){
-        throw new UnsupportedOperationException("Sin programar");
+    }
+
+    @Override
+    public String toString() {
+        return "Pincel Básico";
+
+    }
+
+    @Override
+    public int getRadio() {
+        return RADIO;
     }
 }
