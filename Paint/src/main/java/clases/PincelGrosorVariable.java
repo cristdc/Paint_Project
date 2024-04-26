@@ -1,18 +1,30 @@
 package clases;
 
-public class PincelGrosorVariable {
+public class PincelGrosorVariable extends PincelCirculoDinamico {
     private int radioMinimo;
     private int radioMaximo;
     PincelGrosorVariable(int min, int max){
-        throw new UnsupportedOperationException();
+        super(min);
+        if  (min>0 && max>0){
+            this.radioMaximo=max;
+            this.radioMinimo=min;
+        }else {
+            throw new IllegalArgumentException("Los dos radios deben ser positivos");
+        }
+
+
     }
 
-    public int getRadioMinimo() {
-        return this.radioMinimo;
+    @Override
+    public int getRadio() {
+        return super.getRadio();
     }
 
-    public int getRadioMaximo() {
-        return this.radioMaximo;
+    @Override
+    public void setRadio(int radio) {
+        if (radio >= this.radioMinimo && radio <= this.radioMaximo){
+             super.setRadio(radio);
+        }
     }
-
 }
+
