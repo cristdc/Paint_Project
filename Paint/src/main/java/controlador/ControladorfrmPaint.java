@@ -67,10 +67,11 @@ public class ControladorfrmPaint {
     }
 
     @FXML
-    void guardarImagen(ActionEvent event) throws AWTException {
+    void guardarImagen(ActionEvent event){
         Bounds bounds = this.cnvLienzo.localToScreen(cnvLienzo.getBoundsInLocal());
-        Rectangle rectangulo = new Rectangle((int)bounds.getWidth(),(int)bounds.getHeight());
+        Rectangle rectangulo = new Rectangle((int)bounds.getMinX(), (int)bounds.getMinY(),(int)bounds.getWidth(),(int)bounds.getHeight());
         try {
+
             Robot robot = new Robot();
             BufferedImage captura = robot.createScreenCapture(rectangulo);
             FileChooser fileChooser = new FileChooser();
