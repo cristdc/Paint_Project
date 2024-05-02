@@ -49,7 +49,8 @@ public class ControladorfrmPaint {
 
     @FXML
     void dibujarPunto(MouseEvent event) {
-
+        this.cmbPinceles.getItems();
+        this.cnvLienzo.getGraphicsContext2D().strokeLine(event.getX(), event.getY(), event.getX(), event.getY());
     }
 
     @FXML
