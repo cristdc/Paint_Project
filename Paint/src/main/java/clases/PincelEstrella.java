@@ -17,6 +17,6 @@ public class PincelEstrella implements Pincel{
 
     @Override
     public String toString() {
-        return "Pincel estrella";
+        return "Pincel Estrella";
     }
 }
