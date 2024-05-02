@@ -16,9 +16,9 @@
          <children>
             <ToolBar prefHeight="40.0" prefWidth="914.0">
               <items>
-                <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevaImagen" text="Nuevo" />
-                  <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardarImagen" text="Guardar" />
-                  <Button fx:id="btnAbrir" mnemonicParsing="false" onAction="#abrirImagen" text="Abrir" />
+                <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevaImagen" />
+                  <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardarImagen" />
+                  <Button fx:id="btnAbrir" mnemonicParsing="false" onAction="#abrirImagen" />
                   <HBox alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="616.0" spacing="10.0">
                      <children>
                         <ImageView fx:id="imgPinceles" fitHeight="48.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true" />

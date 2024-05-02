@@ -15,7 +15,7 @@ public class ProgramaPaint extends Application {
     @Override
     public void start(Stage primaryStage){
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(ClassLoader.getSystemResource("frmEquipos.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(ClassLoader.getSystemResource("ControladorfrmPaint.fxml"));
             Scene e = new Scene(fxmlLoader.load());
             primaryStage.setScene(e);
             primaryStage.show();
