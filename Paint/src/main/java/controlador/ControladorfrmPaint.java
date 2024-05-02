@@ -68,7 +68,7 @@ public class ControladorfrmPaint {
 
     @FXML
     void guardarImagen(ActionEvent event) throws AWTException {
-        Bounds bounds = cnvLienzo.localToScreen(cnvLienzo.getBoundsInLocal());
+        Bounds bounds = this.cnvLienzo.localToScreen(cnvLienzo.getBoundsInLocal());
         Rectangle rectangulo = new Rectangle((int)bounds.getWidth(),(int)bounds.getHeight());
         try {
             Robot robot = new Robot();
