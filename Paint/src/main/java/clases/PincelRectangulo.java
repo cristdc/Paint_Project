@@ -15,6 +15,6 @@ public class PincelRectangulo implements Pincel {
 
     @Override
     public String toString() {
-        return "Pincel rectangular";
+        return "Pincel Rectangulo";
     }
 }

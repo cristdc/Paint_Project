@@ -109,7 +109,7 @@ public class ControladorfrmPaint implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         this.inicializarIconos();
         this.inicializarComboBox();
-        //this.nuevaImagen();
+        this.nuevaImagen(null);
     }
 
     @FXML
@@ -118,10 +118,15 @@ public class ControladorfrmPaint implements Initializable {
         ImageView imageView = new ImageView(img);
         Image img2 = new Image("Save-icon.png");
         ImageView imageView2 = new ImageView(img2);
-        Image img3 = new Image("open-file-icon.png");
+        Image img3 = new Image("Action-file-new-icon.png");
         ImageView imageView3 = new ImageView(img3);
         this.btnAbrir.setGraphic(imageView);
         this.btnGuardar.setGraphic(imageView2);
+        this.btnNuevo.setGraphic(imageView3);
+
+        Image img4 = new Image("Pencil-icon.png");
+        ImageView imageView4 = new ImageView(img4);
+        this.imgPinceles.setImage(imageView4.getImage());
     }
     @FXML
     void inicializarComboBox(){
