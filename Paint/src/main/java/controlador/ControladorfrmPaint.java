@@ -3,13 +3,21 @@ package controlador;
 import clases.Pincel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Bounds;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.ComboBox;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.FileChooser;
+
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
 
 public class ControladorfrmPaint {
 
@@ -59,8 +67,21 @@ public class ControladorfrmPaint {
     }
 
     @FXML
-    void guardarImagen(ActionEvent event) {
-
+    void guardarImagen(ActionEvent event) throws AWTException {
+        Bounds bounds = cnvLienzo.localToScreen(cnvLienzo.getBoundsInLocal());
+        Rectangle rectangulo = new Rectangle((int)bounds.getWidth(),(int)bounds.getHeight());
+        try {
+            Robot robot = new Robot();
+            BufferedImage captura = robot.createScreenCapture(rectangulo);
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Guardar imagen");
+            File file = fileChooser.showSaveDialog(null);
+            if (file != null) {
+                ImageIO.write(captura, "png", file);
+            }
+        } catch (Exception e) {
+            new Alert(Alert.AlertType.ERROR).showAndWait();
+        }
     }
 
     @FXML
