@@ -7,9 +7,13 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.ComboBox;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.FileChooser;
+
+import java.io.File;
 
 public class ControladorfrmPaint {
 
@@ -39,7 +43,13 @@ public class ControladorfrmPaint {
 
     @FXML
     void abrirImagen(ActionEvent event) {
+        FileChooser fc=new FileChooser();
+        File ruta = fc.showOpenDialog(null);
+        /*String nombreArchivo = fc.getInitialFileName();
+        ClassLoader.getSystemResourceAsStream(nombreArchivo);*/
 
+        Image image = new Image(ruta.toString());
+        this.cnvLienzo.getGraphicsContext2D().drawImage(image,);
     }
 
     @FXML
