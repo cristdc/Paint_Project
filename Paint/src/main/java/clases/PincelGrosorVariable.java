@@ -26,5 +26,10 @@ public class PincelGrosorVariable extends PincelCirculoDinamico {
              super.setRadio(radio);
         }
     }
+
+    @Override
+    public String toString() {
+        return "Pincel Grosor Variable";
+    }
 }
 
