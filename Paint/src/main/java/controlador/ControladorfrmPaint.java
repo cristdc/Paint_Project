@@ -1,6 +1,7 @@
 package controlador;
 
 import clases.Pincel;
+import clases.Punto;
 import clases.Reseteable;
 import clases.TipoPincel;
 import javafx.event.ActionEvent;
@@ -87,13 +88,13 @@ public class ControladorfrmPaint implements Initializable {
 
     @FXML
     void dibujarPunto(MouseEvent event) {
-        this.cmbPinceles.getValue();
-        this.cnvLienzo.getGraphicsContext2D().strokeLine(event.getX(), event.getY(), event.getX(), event.getY());
+        this.cmbPinceles.getSelectionModel().getSelectedItem().dibujar(this.cnvLienzo.getGraphicsContext2D(), new Punto(event.getX(), event.getY()));
     }
 
     @FXML
     void empezarDibujar(MouseEvent event) {
-        Pincel p = this.cmbPinceles.getValue();
+        Pincel p = this.cmbPinceles.getSelectionModel().getSelectedItem();
+
         if (p instanceof Reseteable pr){
             pr.resetear();
         }
@@ -136,7 +137,7 @@ public class ControladorfrmPaint implements Initializable {
         ImageView imageView = new ImageView(img);
         Image img2 = new Image("Save-icon.png");
         ImageView imageView2 = new ImageView(img2);
-        Image img3 = new Image("open-file-icon.png");
+        Image img3 = new Image("Action-file-new-icon.png");
         ImageView imageView3 = new ImageView(img3);
         Image img4 = new Image("Pencil-icon.png");
         ImageView imageView4 = new ImageView(img4);
