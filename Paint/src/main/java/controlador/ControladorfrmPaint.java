@@ -19,6 +19,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.stage.FileChooser;
 
 import javax.imageio.ImageIO;
@@ -60,21 +61,17 @@ public class ControladorfrmPaint implements Initializable {
     @FXML
     void abrirImagen(ActionEvent event) {
 
-        /*try{
+        try{
             FileChooser fc = new FileChooser();
             File ruta = fc.showOpenDialog(null);
             URL url = ruta.toURL();
             Image i = new Image(url.toString());
-            new Canvas().getGraphicsContext2D().drawImage(i,0,0);
+            Bounds bounds = this.cnvLienzo.localToScreen(cnvLienzo.getBoundsInLocal());
+            cnvLienzo.getGraphicsContext2D().drawImage(i,0,0,(int)bounds.getWidth(),(int)bounds.getHeight());
 
         }catch (MalformedURLException e){
             System.out.println(e.getMessage());
-        }*/
-
-        FileChooser fc = new FileChooser();
-        InputStream entrada = ClassLoader.getSystemResourceAsStream(fc.showOpenDialog(null).getName());
-        Image i = new Image(entrada.toString());
-        this.cnvLienzo.getGraphicsContext2D().drawImage(i,0,0);
+        }
 
     }
 
@@ -121,7 +118,12 @@ public class ControladorfrmPaint implements Initializable {
 
     @FXML
     void nuevaImagen(ActionEvent event) {
-
+        GraphicsContext gc = this.cnvLienzo.getGraphicsContext2D();
+        Paint colorRelleno = gc.getFill();
+        Color b = Color.web("#ffffff");
+        this.cnvLienzo.getGraphicsContext2D().setFill(b);
+        gc.fillRect(0,0,cnvLienzo.getWidth(),cnvLienzo.getHeight());
+        this.cnvLienzo.getGraphicsContext2D().setFill(colorRelleno);
     }
 
     @Override
