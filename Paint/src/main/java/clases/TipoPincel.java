@@ -9,7 +9,8 @@ public enum TipoPincel{
     PINCEL_GROSOR_VARIABLE(new PincelGrosorVariable(4,40)), PINCEL_CONTINUO(new PincelContinuo()),
     PINCEL_RECTANGULO(new PincelRectangulo()), PINCEL_ESTRELLA(new PincelEstrella()),
     PINCEL_ESTRELLA_GORDA(new PincelEstrellaGorda(new PincelGrosorVariable(2,15),70,15)), PINCEL_CONSTELACION(new PincelEstrellaGorda(new PincelEstrella(), 70,15)),
-    PINCEL_CHURRO(new PincelChurro()), PINCEL_PSICODELICO(new PincelPsicodelico()), PINCEL_SORPRESA(new PincelSorpresa());
+    PINCEL_CHURRO(new PincelChurro()), PINCEL_PSICODELICO(new PincelPsicodelico()), PINCEL_SORPRESA(new PincelSorpresa()),
+    PINCEL_SPRAY(new PincelSpray(new PincelGrosorVariable(2,15),70,15));
 
     private Pincel pincel;
 
@@ -30,7 +31,7 @@ public enum TipoPincel{
                         PINCEL_RECTANGULO.getPincel(), PINCEL_GROSOR_VARIABLE.getPincel(),
                         PINCEL_CHURRO.getPincel(), PINCEL_SORPRESA.getPincel(),
                         PINCEL_CONSTELACION.getPincel(), PINCEL_ESTRELLA_GORDA.getPincel(),
-                        PINCEL_PSICODELICO.getPincel())
+                        PINCEL_PSICODELICO.getPincel(), PINCEL_SPRAY.getPincel())
                        ;
 
         /*for(int i = 0; i<pincel.length; i++){

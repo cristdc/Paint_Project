@@ -27,14 +27,16 @@ public class PincelPsicodelico extends PincelSorpresa {
 
     @Override
     public void dibujar(GraphicsContext g, Punto p) {
-        Paint color= g.getFill();
+        g.setFill(getColorAleatorio());
+        super.dibujar(g,p);
+        /*Paint color= g.getFill();
         Random random= new Random();
         int r= random.nextInt(0, 256);
         int ga= random.nextInt(0, 256);
         int b= random.nextInt(0, 256);
         Color colorAleatorio= Color.color(r, ga,b);
         g.setFill(colorAleatorio);
-        super.dibujar(g, p);
+        super.dibujar(g, p);*/
     }
 
 
