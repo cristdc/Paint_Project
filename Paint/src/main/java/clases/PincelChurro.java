@@ -1,13 +1,13 @@
 package clases;
 
 
-public class PincelGalletas extends PincelSpray{
-    PincelGalletas(){
+public class PincelChurro extends PincelEstrellaGorda {
+    PincelChurro(){
         super(new PincelEstrella(),10,200);
     }
 
     @Override
     public String toString() {
-        return "Pincel Galletas";
+        return "Pincel Churro";
     }
 }

@@ -7,10 +7,10 @@ import java.util.Random;
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
 
-public class PincelSpray extends PincelCirculoDinamico{
+public class PincelEstrellaGorda extends PincelCirculoDinamico{
     private Pincel pincel;
     private int densidad;
-    PincelSpray(Pincel p, int r, int d){
+    PincelEstrellaGorda(Pincel p, int r, int d){
         super(r);
         this.pincel= p;
         this.densidad= d;
@@ -18,11 +18,11 @@ public class PincelSpray extends PincelCirculoDinamico{
 
     @Override
     public String toString() {
-        return "Pincel Spray";
+        return "Pincel Estrella Gorda";
     }
     @Override
     public void dibujar(GraphicsContext g, Punto p){
-        for(int i=0; i==densidad; i++){
+        for(int i=0; i<densidad; i++){
             int r= new Random().nextInt(1, super.getRadio());
             int gr= new Random().nextInt(0, 360);
             int a= (int) Math.toRadians(gr);
