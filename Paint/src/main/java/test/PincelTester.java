@@ -13,7 +13,7 @@ public class PincelTester extends Application {
 
     /*PARA COMPROBAR LOS PINCELES SE TIENE QUE CAMBIAR
       EL NULL POR EL TIPO DE PINCEL QUE SE QUIERE COMPROBAR*/
-    public static final TipoPincel TIPO_PINCEL = TipoPincel.PINCEL_GORDO;
+    public static final TipoPincel TIPO_PINCEL = TipoPincel.PINCEL_SORPRESA;
 
     public static void main(String[] args) {
         launch(args);
