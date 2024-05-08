@@ -73,7 +73,7 @@ public class ControladorfrmPaint implements Initializable {
         FileChooser fc = new FileChooser();
         InputStream entrada = ClassLoader.getSystemResourceAsStream(fc.showOpenDialog(null).getName());
         Image i = new Image(entrada.toString());
-        new Canvas().getGraphicsContext2D().drawImage(i,0,0);
+        this.cnvLienzo.getGraphicsContext2D().drawImage(i,0,0);
 
     }
 
@@ -87,17 +87,17 @@ public class ControladorfrmPaint implements Initializable {
 
     @FXML
     void dibujarPunto(MouseEvent event) {
-        this.cmbPinceles.getItems();
+        this.cmbPinceles.getValue();
         this.cnvLienzo.getGraphicsContext2D().strokeLine(event.getX(), event.getY(), event.getX(), event.getY());
     }
 
     @FXML
     void empezarDibujar(MouseEvent event) {
-        Pincel p = cmbPinceles.getValue();
+        Pincel p = this.cmbPinceles.getValue();
         if (p instanceof Reseteable pr){
             pr.resetear();
-            dibujarPunto(event);
         }
+        this.dibujarPunto(event);
     }
 
     @FXML
@@ -127,7 +127,7 @@ public class ControladorfrmPaint implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         this.inicializarIconos();
         this.inicializarComboBox();
-        //this.nuevaImagen();
+        this.nuevaImagen(null);
     }
 
     @FXML
@@ -138,8 +138,12 @@ public class ControladorfrmPaint implements Initializable {
         ImageView imageView2 = new ImageView(img2);
         Image img3 = new Image("open-file-icon.png");
         ImageView imageView3 = new ImageView(img3);
+        Image img4 = new Image("Pencil-icon.png");
+        ImageView imageView4 = new ImageView(img4);
         this.btnAbrir.setGraphic(imageView);
         this.btnGuardar.setGraphic(imageView2);
+        this.btnNuevo.setGraphic(imageView3);
+        this.imgPinceles.setImage(img4);
     }
     @FXML
     void inicializarComboBox(){
